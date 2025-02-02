@@ -133,6 +133,9 @@
     <Filter Include="Scripts\Core\Actors\Widgets\Shape">
       <UniqueIdentifier>{9c4e8c18-ee4f-4aab-abea-7ebe3f9f8305}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts\Managers\File">
+      <UniqueIdentifier>{cf2e8d43-42bd-49a6-895d-1fd9b3098917}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TextObject.cpp">
@@ -275,9 +278,6 @@
     </ClCompile>
     <ClCompile Include="TextWidget.cpp">
       <Filter>Scripts\Core\Actors\Widgets\Texts</Filter>
-    </ClCompile>
-    <ClCompile Include="ProgressBar.cpp">
-      <Filter>Scripts\Core\Actors\Widgets\ProgressBar</Filter>
     </ClCompile>
     <ClCompile Include="ShapeWidget.cpp">
       <Filter>Scripts\Core\Actors\Widgets\Shape</Filter>
@@ -452,8 +452,8 @@
     <ClInclude Include="ShapeWidget.h">
       <Filter>Scripts\Core\Actors\Widgets\Shape</Filter>
     </ClInclude>
-    <ClInclude Include="ProgressBar.h">
-      <Filter>Scripts\Core\Actors\Widgets\ProgressBar</Filter>
+    <ClInclude Include="FileManager.h">
+      <Filter>Scripts\Managers\File</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

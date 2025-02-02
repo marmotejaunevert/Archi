@@ -176,7 +176,6 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClCompile Include="MovementComponent.cpp" />
     <ClCompile Include="MusicSample.cpp" />
     <ClCompile Include="Object.cpp" />
-    <ClCompile Include="ProgressBar.cpp" />
     <ClCompile Include="RectangleActor.cpp" />
     <ClCompile Include="RootComponent.cpp" />
     <ClCompile Include="Sample.cpp" />
@@ -215,6 +214,7 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClInclude Include="CustomException.h" />
     <ClInclude Include="Duck.h" />
     <ClInclude Include="DuckHuntGame.h" />
+    <ClInclude Include="FileManager.h" />
     <ClInclude Include="FontManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameManager.h" />
@@ -224,7 +224,6 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClInclude Include="Level.h" />
     <ClInclude Include="MovementComponent.h" />
     <ClInclude Include="MusicSample.h" />
-    <ClInclude Include="ProgressBar.h" />
     <ClInclude Include="RenderType.h" />
     <ClInclude Include="Sample.h" />
     <ClInclude Include="ShapeWidget.h" />
