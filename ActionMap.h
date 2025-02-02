@@ -13,16 +13,7 @@ namespace Input
 	public:
 		ActionMap();
 
-	public:
-		void Update(const EventInfo& _event);
-
-		template <typename Type>
-		const Type* Retrieve(const EventInfo& _event)
-		{
-			return _event->getIf<Type>();
-		}
+		void Update(const Trigger& _event); 
 	};
 }
-
-
 

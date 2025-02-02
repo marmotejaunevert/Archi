@@ -66,6 +66,6 @@ public:
 	~ActorManager();
 
 	void BeginPlay();
-	void Update(const float _deltaTime);
+	void Tick(const float _deltaTime);
 	void BeginDestroy();
 };

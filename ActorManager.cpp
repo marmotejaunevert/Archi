@@ -17,13 +17,13 @@ void ActorManager::BeginPlay()
 	}
 }
 
-void ActorManager::Update(const float _deltaTime)
+void ActorManager::Tick(const float _deltaTime)
 {
 	vector<Actor*> _garbage;
 
 	for (Actor* _actor : allActors)
 	{
-		_actor->Update(_deltaTime);
+		_actor->Tick(_deltaTime);
 
 		if (_actor->IsToDelete())
 		{

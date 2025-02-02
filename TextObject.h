@@ -1,19 +1,10 @@
 #pragma once
 #include "Object.h"
-#include "RenderType.h"
 
 enum FontExtensionType
 {
 	OTF,
 	TTF,
-};
-
-struct TextData
-{
-	string text;
-	RenderType type;
-	string path;
-	FontExtensionType fontType;
 };
 
 class TextObject : public Object
@@ -68,6 +59,5 @@ public:
 
 public:
 	TextObject(const string& _text, const string& _path = "", const FontExtensionType& _fontType = OTF);
-	TextObject(const TextData& _data);
 	~TextObject();
 };

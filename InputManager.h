@@ -7,11 +7,13 @@ namespace Input
 	class InputManager : public Singleton<InputManager>
 	{
 		set<ActionMap*> actionMaps;
-	
+
+	private:
+		void UpdateActionMaps();
+
 	public:
 		void Update(RenderWindow& _window);
-	private:
-		void UpdateActionMap(const EventInfo& _event);
 	};
+
 }
 

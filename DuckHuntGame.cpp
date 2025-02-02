@@ -6,8 +6,6 @@
 #include "Level.h"
 #include "HUD.h"
 
-#include "Label.h"
-
 using namespace Camera;
 using namespace UI;
 
@@ -61,14 +59,12 @@ void DuckHuntGame::Start()
     //{
     //    _movement->SetTarget(_target);
     //}
-
-    label = new Label(TextData("coucou", Screen, "", OTF), AT_CENTER);
 }
 
 bool DuckHuntGame::Update()
 {
 	Super::Update();
-    label->Render(window);
+
     /*
     Shape* _ballShape = ball->GetMesh()->GetShape()->GetDrawable();
     const FloatRect& _ballRect = _ballShape->getGlobalBounds();
