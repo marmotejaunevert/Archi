@@ -1,11 +1,11 @@
 #include "Game.h"
 #include "ActorManager.h"
+#include "InputManager.h"
 #include "CameraManager.h"
 #include "TimerManager.h"
-#include "InputManager.h"
 
-using namespace Camera;
 using namespace Input;
+using namespace Camera;
 
 Game::Game()
 {
@@ -17,19 +17,23 @@ void Game::Start()
 {
     window.create(VideoMode({ 800, 400 }), "Angry Birds");
 
-    M_CAMERA.CreateCamera("DefaultCamera"); 
-    //M_CAMERA.CreateCamera(Vector2f(), Vector2f(300.0f, 300.0f), "DefaultCamera");
-    M_ACTOR.BeginPlay();
+    //M_CAMERA.CreateCamera("DefaultCamera"); 
+    ////M_CAMERA.CreateCamera(Vector2f(), Vector2f(300.0f, 300.0f), "DefaultCamera");
+    //M_ACTOR.BeginPlay();
+
+    ActionMap* _actionMap = M_INPUT.CreateActionMap("Demo");
+    /*Action* _action = new Action("Test", ActionData(Key::A, ActionType::KeyPressed), [&]() { LOG(Display, "coucou"); });
+    _actionMap->AddAction(_action);
+    _actionMap->Enable();*/
 };
 
 bool Game::Update()
 {
+    M_INPUT.Update(window);
     TM_Seconds& _timer = M_TIMER;
     _timer.Update();
-    M_INPUT.Update(window);
-    
     const float _deltaTime = _timer.GetDeltaTime().asSeconds();
-    M_ACTOR.Update(_deltaTime);
+    //M_ACTOR.Update(_deltaTime);
 
     return IsOver();
 }
@@ -37,11 +41,11 @@ bool Game::Update()
 void Game::UpdateWindow()
 {
     window.clear();
-    M_CAMERA.RenderAllCameras(window);
+    //M_CAMERA.RenderAllCameras(window);
     window.display();
 }
 
 void Game::Stop()
 {
-    M_ACTOR.BeginDestroy();
+    //M_ACTOR.BeginDestroy();
 }

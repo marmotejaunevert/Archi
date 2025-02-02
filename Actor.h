@@ -6,12 +6,12 @@
 #include "RootComponent.h"
 #include "TimerManager.h"
 
+class Level;
+
 class Actor : public Core, public ITransformableModifier, public ITransformableViewer
 {
 	bool isToDelete;
-protected:
 	u_int id;
-private:
 	string name;
 	string displayName;
 	set<Component*> components;
@@ -19,6 +19,8 @@ private:
 	Actor* parent;
 	AttachmentType attachment;
 	set<Actor*> children;
+	Level* level;
+
 protected:
 	float lifeSpan;
 
@@ -259,7 +261,7 @@ public:
 	virtual void Construct();
 	virtual void Deconstruct();
 	virtual void BeginPlay() override;
-	virtual void Update(const float _deltaTime) override;
+	virtual void Tick(const float _deltaTime) override;
 	virtual void BeginDestroy() override;
 
 	void Destroy();
