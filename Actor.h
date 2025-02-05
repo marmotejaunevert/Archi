@@ -9,9 +9,7 @@
 class Actor : public Core, public ITransformableModifier, public ITransformableViewer
 {
 	bool isToDelete;
-protected:
 	u_int id;
-private:
 	string name;
 	string displayName;
 	set<Component*> components;
@@ -259,7 +257,7 @@ public:
 	virtual void Construct();
 	virtual void Deconstruct();
 	virtual void BeginPlay() override;
-	virtual void Update(const float _deltaTime) override;
+	virtual void Tick(const float _deltaTime) override;
 	virtual void BeginDestroy() override;
 
 	void Destroy();

@@ -4,11 +4,6 @@
 
 namespace UI
 {
-	enum WidgetType
-	{
-		WT_UI,
-	};
-
 	enum VisibilityType
 	{
 		Hidden,
