@@ -104,25 +104,21 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "..\SFML-3.0.0\bin\sfml-audio-d-3.dll" "$(OutDir)"
-
-xcopy /y /d "..\SFML-3.0.0\bin\sfml-graphics-d-3.dll" "$(OutDir)"
-
-xcopy /y /d "..\SFML-3.0.0\bin\sfml-network-d-3.dll" "$(OutDir)"
-
-xcopy /y /d "..\SFML-3.0.0\bin\sfml-system-d-3.dll" "$(OutDir)"
-
-xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
+      <Command>xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-audio-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-graphics-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-network-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-system-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
 
 </Command>
     </PostBuildEvent>
@@ -148,10 +144,14 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClCompile Include="ActionMap.cpp" />
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="ActorManager.cpp" />
+    <ClCompile Include="AngryBirdGame.cpp" />
+    <ClCompile Include="BigBrother.cpp" />
     <ClCompile Include="Bird.cpp" />
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="AnimationComponent.cpp" />
     <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="BluesBird.cpp" />
+    <ClCompile Include="BombBird.cpp" />
     <ClCompile Include="CameraActor.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="CameraManager.cpp" />
@@ -163,11 +163,16 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClCompile Include="CustomException.cpp" />
     <ClCompile Include="Duck.cpp" />
     <ClCompile Include="DuckHuntGame.cpp" />
+    <ClCompile Include="Egg.cpp" />
+    <ClCompile Include="Exercice.cpp" />
     <ClCompile Include="FontManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GreenBird.cpp" />
     <ClCompile Include="HUD.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Kismet.cpp" />
+    <ClCompile Include="Label.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -177,31 +182,36 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClCompile Include="MusicSample.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="RectangleActor.cpp" />
+    <ClCompile Include="RedBird.cpp" />
     <ClCompile Include="RootComponent.cpp" />
     <ClCompile Include="Sample.cpp" />
     <ClCompile Include="ShapeObject.cpp" />
-    <ClCompile Include="ShapeWidget.cpp" />
     <ClCompile Include="SoundSample.cpp" />
     <ClCompile Include="AudioManager.cpp" />
-    <ClCompile Include="Label.cpp" />
     <ClCompile Include="Spawner.cpp" />
     <ClCompile Include="SquareActor.cpp" />
+    <ClCompile Include="TestBird.cpp" />
     <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="TextureManager.cpp" />
-    <ClCompile Include="TextWidget.cpp" />
     <ClCompile Include="TriangleActor.cpp" />
     <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="WhiteBird.cpp" />
     <ClCompile Include="Widget.cpp" />
+    <ClCompile Include="YellowBird.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Action.h" />
     <ClInclude Include="ActionMap.h" />
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorManager.h" />
+    <ClInclude Include="AngryBirdGame.h" />
+    <ClInclude Include="BigBrother.h" />
     <ClInclude Include="Bird.h" />
     <ClInclude Include="Animation.h" />
     <ClInclude Include="AnimationComponent.h" />
     <ClInclude Include="Ball.h" />
+    <ClInclude Include="BluesBird.h" />
+    <ClInclude Include="BombBird.h" />
     <ClInclude Include="CameraActor.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CameraManager.h" />
@@ -218,18 +228,19 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClInclude Include="FontManager.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GreenBird.h" />
     <ClInclude Include="HUD.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Kismet.h" />
     <ClInclude Include="Label.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="MovementComponent.h" />
     <ClInclude Include="MusicSample.h" />
     <ClInclude Include="RenderType.h" />
     <ClInclude Include="Sample.h" />
-    <ClInclude Include="ShapeWidget.h" />
     <ClInclude Include="Spawner.h" />
     <ClInclude Include="SubclassOf.h" />
-    <ClInclude Include="TextWidget.h" />
+    <ClInclude Include="TestBird.h" />
     <ClInclude Include="TransformableViewer.h" />
     <ClInclude Include="TransformableModifier.h" />
     <ClInclude Include="Logger.h" />
@@ -250,7 +261,9 @@ xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClInclude Include="TransformData.h" />
     <ClInclude Include="TriangleActor.h" />
     <ClInclude Include="Utilities.h" />
+    <ClInclude Include="WhiteBird.h" />
     <ClInclude Include="Widget.h" />
+    <ClInclude Include="YellowBird.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="TODOList.txt" />

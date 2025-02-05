@@ -1,18 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
+
 namespace Input
 {
-
-	typedef optional<Event> EventInfo;
-
 	enum ControllerButtonsType
 	{
 		Start,
 		Select,
 		Cross,
-		Cricle,
-		Square,
+		Circle,
 		Triangle,
+		Square,
 		L1,
 		R1,
 		L2,
@@ -21,7 +19,7 @@ namespace Input
 		RightStick,
 	};
 
-	enum ControllerAxisType
+	enum ControllerAxesType
 	{
 		LeftStickX,
 		LeftStickY,
@@ -29,18 +27,20 @@ namespace Input
 		RightStickY,
 	};
 
-
 	enum ValueType
 	{
 		Digital, // bool
-		Axis, // float
-		Axis2, // Vector2f
+		Axis,    // float
+		Axis2,   // Vector2f
 	};
+
+	typedef optional<Event> Trigger;
 
 	struct ActionData
 	{
-		ValueType value;
-		type_index trigger;
+		ValueType type;
+		Trigger trigger;
+
 	};
 
 	class Action
@@ -49,17 +49,5 @@ namespace Input
 		ActionData data;
 		vector<int> inputs;
 		function<void()> callback;
-
-	public:
-
-		void TryToExecute(const EventInfo& _event)
-		{
-			type_index _type = typeid(_event.value());
-			if (data.trigger == _type)
-			{
-				callback();
-			}
-		}
 	};
 }
-

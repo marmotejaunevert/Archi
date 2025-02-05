@@ -127,11 +127,44 @@
     <Filter Include="AngryBird">
       <UniqueIdentifier>{9b4cfc61-a9cf-46e1-ae81-c58ccdacc25c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scripts\Core\Actors\Widgets\ProgressBar">
-      <UniqueIdentifier>{d4e90e22-7780-4bd5-add3-92ad56166b61}</UniqueIdentifier>
+    <Filter Include="Scripts\Managers\Input">
+      <UniqueIdentifier>{65847620-f0fa-4b9f-b832-655b9c65c74b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scripts\Core\Actors\Widgets\Shape">
-      <UniqueIdentifier>{9c4e8c18-ee4f-4aab-abea-7ebe3f9f8305}</UniqueIdentifier>
+    <Filter Include="AngryBird\Bird">
+      <UniqueIdentifier>{418b8de2-2c60-4e67-907e-9bcc8804766a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Red">
+      <UniqueIdentifier>{fd467970-e399-4646-aee4-58e38b4a6f61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Bomb">
+      <UniqueIdentifier>{64ee90b9-0c1f-4420-a2d4-9f345d1bda14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Yellow">
+      <UniqueIdentifier>{3e2e888b-660c-4f37-9c2a-80ad4d380d21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\White">
+      <UniqueIdentifier>{87be3598-cf03-4bd2-9dde-e4de4d746df8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Green">
+      <UniqueIdentifier>{c3a10b8c-4aae-4b2e-a88b-233a1dd321bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\BigBrother">
+      <UniqueIdentifier>{320b6c5f-ce4c-49fd-ae78-71dfde4ace43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Blues">
+      <UniqueIdentifier>{457a3db5-0b2b-4150-a1e4-2ff6c49ddd14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exercice">
+      <UniqueIdentifier>{9f09f417-d96c-46f4-924b-b291f8578dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Orange">
+      <UniqueIdentifier>{42a512ad-b733-4eb4-adbb-769b520a12a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Game">
+      <UniqueIdentifier>{eaae5934-d99d-4163-906c-1041d493cae1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AngryBird\Bird\Test">
+      <UniqueIdentifier>{ef68ae73-fc84-447f-9372-cb2851cf013e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Scripts\Managers\File">
       <UniqueIdentifier>{cf2e8d43-42bd-49a6-895d-1fd9b3098917}</UniqueIdentifier>
@@ -165,9 +198,6 @@
     <ClCompile Include="ActorManager.cpp">
       <Filter>Scripts\Managers\Actor</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Scripts\Resource Files\Logger</Filter>
     </ClCompile>
@@ -197,6 +227,9 @@
     </ClCompile>
     <ClCompile Include="FontManager.cpp">
       <Filter>Scripts\Managers\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Scripts\Core\Actors\Widgets\Texts</Filter>
     </ClCompile>
     <ClCompile Include="Spawner.cpp">
       <Filter>DuckHunt</Filter>
@@ -258,26 +291,56 @@
     <ClCompile Include="CameraComponent.cpp">
       <Filter>Scripts\Core\Components\Camera</Filter>
     </ClCompile>
+    <ClCompile Include="Kismet.cpp">
+      <Filter>Scripts\Resource Files\Kismet</Filter>
+    </ClCompile>
     <ClCompile Include="Widget.cpp">
       <Filter>Scripts\Core\Actors\Widgets</Filter>
     </ClCompile>
-    <ClCompile Include="Bird.cpp">
-      <Filter>AngryBird</Filter>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Scripts\Managers\Input</Filter>
     </ClCompile>
     <ClCompile Include="Action.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Scripts\Managers\Input</Filter>
     </ClCompile>
     <ClCompile Include="ActionMap.cpp">
+      <Filter>Scripts\Managers\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="AngryBirdGame.cpp">
+      <Filter>AngryBird\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BigBrother.cpp">
+      <Filter>AngryBird\Bird\BigBrother</Filter>
+    </ClCompile>
+    <ClCompile Include="BluesBird.cpp">
+      <Filter>AngryBird\Bird\Blues</Filter>
+    </ClCompile>
+    <ClCompile Include="BombBird.cpp">
+      <Filter>AngryBird\Bird\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="GreenBird.cpp">
+      <Filter>AngryBird\Bird\Green</Filter>
+    </ClCompile>
+    <ClCompile Include="RedBird.cpp">
+      <Filter>AngryBird\Bird\Red</Filter>
+    </ClCompile>
+    <ClCompile Include="WhiteBird.cpp">
+      <Filter>AngryBird\Bird\White</Filter>
+    </ClCompile>
+    <ClCompile Include="YellowBird.cpp">
+      <Filter>AngryBird\Bird\Yellow</Filter>
+    </ClCompile>
+    <ClCompile Include="Bird.cpp">
+      <Filter>AngryBird\Bird</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InputManager.cpp">
+    <ClCompile Include="OrangeBird.cpp">
+      <Filter>AngryBird\Bird\Orange</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Label.cpp">
-      <Filter>Scripts\Core\Actors\Widgets\Texts</Filter>
-    </ClCompile>
-    <ClCompile Include="TextWidget.cpp">
-      <Filter>Scripts\Core\Actors\Widgets\Texts</Filter>
     </ClCompile>
     <ClCompile Include="ShapeWidget.cpp">
       <Filter>Scripts\Core\Actors\Widgets\Shape</Filter>
@@ -428,29 +491,59 @@
     <ClInclude Include="CameraComponent.h">
       <Filter>Scripts\Core\Components\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="Kismet.h">
+      <Filter>Scripts\Resource Files\Kismet</Filter>
+    </ClInclude>
     <ClInclude Include="Widget.h">
       <Filter>Scripts\Core\Actors\Widgets</Filter>
     </ClInclude>
-    <ClInclude Include="Bird.h">
-      <Filter>AngryBird</Filter>
-    </ClInclude>
-    <ClInclude Include="Action.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ActionMap.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="RenderType.h">
+      <Filter>Scripts\Core\Actors\Widgets</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
+      <Filter>Scripts\Managers\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>Scripts\Managers\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionMap.h">
+      <Filter>Scripts\Managers\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="AngryBirdGame.h">
+      <Filter>AngryBird\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="BigBrother.h">
+      <Filter>AngryBird\Bird\BigBrother</Filter>
+    </ClInclude>
+    <ClInclude Include="BluesBird.h">
+      <Filter>AngryBird\Bird\Blues</Filter>
+    </ClInclude>
+    <ClInclude Include="BombBird.h">
+      <Filter>AngryBird\Bird\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="GreenBird.h">
+      <Filter>AngryBird\Bird\Green</Filter>
+    </ClInclude>
+    <ClInclude Include="RedBird.h">
+      <Filter>AngryBird\Bird\Red</Filter>
+    </ClInclude>
+    <ClInclude Include="WhiteBird.h">
+      <Filter>AngryBird\Bird\White</Filter>
+    </ClInclude>
+    <ClInclude Include="YellowBird.h">
+      <Filter>AngryBird\Bird\Yellow</Filter>
+    </ClInclude>
+    <ClInclude Include="Bird.h">
+      <Filter>AngryBird\Bird</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TextWidget.h">
-      <Filter>Scripts\Core\Actors\Widgets\Texts</Filter>
+    <ClInclude Include="OrangeBird.h">
+      <Filter>AngryBird\Bird\Orange</Filter>
     </ClInclude>
-    <ClInclude Include="RenderType.h">
-      <Filter>Scripts\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="ShapeWidget.h">
-      <Filter>Scripts\Core\Actors\Widgets\Shape</Filter>
+    <ClInclude Include="Egg.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FileManager.h">
       <Filter>Scripts\Managers\File</Filter>

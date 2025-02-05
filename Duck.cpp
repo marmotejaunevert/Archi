@@ -1,6 +1,5 @@
 #include "Duck.h"
 #include "TimerManager.h"
-#include "Level.h"
 #include "AudioManager.h"
 
 Duck::Duck(const Vector2f& _size, const string& _path, const IntRect& _rect) : MeshActor(RectangleShapeData(_size, _path, PNG, false, _rect), "Duck")

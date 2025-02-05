@@ -2,10 +2,9 @@
 #include "ActorManager.h"
 #include "CameraManager.h"
 #include "TimerManager.h"
-#include "InputManager.h"
 
+//using namespace Input;
 using namespace Camera;
-using namespace Input;
 
 Game::Game()
 {
@@ -26,10 +25,16 @@ bool Game::Update()
 {
     TM_Seconds& _timer = M_TIMER;
     _timer.Update();
-    M_INPUT.Update(window);
-    
+
+    //M_INPUT.Update(window);
+    class InputManager : public Singleton<InputManager>
+{
+public:
+	void Update(RenderWindow& _window);
+};
+
     const float _deltaTime = _timer.GetDeltaTime().asSeconds();
-    M_ACTOR.Update(_deltaTime);
+    M_ACTOR.Tick(_deltaTime);
 
     return IsOver();
 }
