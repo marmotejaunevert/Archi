@@ -166,6 +166,9 @@
     <Filter Include="AngryBird\Bird\Test">
       <UniqueIdentifier>{ef68ae73-fc84-447f-9372-cb2851cf013e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scripts\Managers\File">
+      <UniqueIdentifier>{cf2e8d43-42bd-49a6-895d-1fd9b3098917}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TextObject.cpp">
@@ -339,11 +342,8 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Egg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TestBird.cpp">
-      <Filter>AngryBird\Bird\Test</Filter>
+    <ClCompile Include="ShapeWidget.cpp">
+      <Filter>Scripts\Core\Actors\Widgets\Shape</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -545,8 +545,8 @@
     <ClInclude Include="Egg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TestBird.h">
-      <Filter>AngryBird\Bird\Test</Filter>
+    <ClInclude Include="FileManager.h">
+      <Filter>Scripts\Managers\File</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
