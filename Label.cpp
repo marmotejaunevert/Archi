@@ -1,21 +1,11 @@
 #include "Label.h"
-#include "CameraManager.h"
 
-UI::Label::Label(const string& _text, const RenderType& _type, const string& _path,
-				 const FontExtensionType& _fontType)
-			   : Widget("Label", _type)
+Label::Label(const TextData& _data, const WidgetType& _type) : TextWidget(_data, _type)
 {
-	text = new TextObject(_text, _path, _fontType);
+	alignement = AT_CENTER;
 }
 
-UI::Label::~Label()
+void Label::Render(RenderWindow& _window)
 {
-	delete text;
-}
-
-
-void UI::Label::Render(RenderWindow& _window)
-{
-	if (visibility == Hidden) return;
-	_window.draw(*text->GetDrawable());
+	_window.draw(*textObject->GetDrawable());
 }

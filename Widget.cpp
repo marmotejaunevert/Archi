@@ -11,6 +11,14 @@ UI::Widget::Widget(const string& _name, const RenderType& _type) : Actor(_name)
 	zOrder = 0;
 }
 
+UI::Widget::Widget(const WidgetType& _type)
+{
+	type = Screen;
+	visibility = Visible;
+	renderToken = 0;
+	zOrder = 0;
+}
+
 void UI::Widget::Construct()
 {
 	const RenderData& _data = RenderData(bind(&Widget::Render, this, _1), type);

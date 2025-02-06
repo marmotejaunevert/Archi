@@ -7,6 +7,13 @@ enum FontExtensionType
 	TTF,
 };
 
+struct TextData
+{
+	string _text;
+	string _path = "";
+	FontExtensionType _fontType = OTF;
+};
+
 class TextObject : public Object
 {
 	Text* text;
@@ -59,5 +66,6 @@ public:
 
 public:
 	TextObject(const string& _text, const string& _path = "", const FontExtensionType& _fontType = OTF);
+	TextObject(const TextData& _data);
 	~TextObject();
 };

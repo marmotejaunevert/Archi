@@ -7,6 +7,12 @@ TextObject::TextObject(const string& _text, const string& _path, const FontExten
 	M_FONT.Load(this, _path, _fontType);
 }
 
+TextObject::TextObject(const TextData& _data)
+{
+	text = new Text(font, _data._text);
+	M_FONT.Load(this, _data._path, _data._fontType);
+}
+
 TextObject::~TextObject()
 {
 	delete text;

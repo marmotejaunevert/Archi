@@ -1,59 +1,58 @@
 #pragma once
-#include "Widget.h"
-#include "TextObject.h"
+#include "TextWidget.h"
+#include "CameraActor.h"
 
-namespace UI
+enum AligmentText
 {
-	class Label : public Widget
+	AT_TOP_LEFT,
+	AT_TOP_CENTER,
+	AT_TOP_RIGHT,
+	AT_LEFT,
+	AT_CENTER,
+	AT_RIGHT,
+	AT_BOTTOM_LEFT,
+	AT_BOTTOM_CENTER,
+	AT_BOTTOM_RIGHT,
+};
+
+class Label : public TextWidget
+{
+	AligmentText alignement;
+
+public:
+	virtual void SetString(const string& _text)
 	{
-		TextObject* text;
+		textObject->GetDrawable()->setString(_text);
+		//SetAlignement(alignement);
+	}
+	void SetAlignement(const AligmentText& _alignement, const CameraActor& _camera)
+	{
+		alignement = _alignement;
+		View* _view = _camera.GetView();
+		const FloatRect& _textRect = textObject->GetDrawable()->getGlobalBounds();
 
-	public:
-	#pragma region Modifier
+		Vector2f _value[] = {
 
-		FORCEINLINE virtual void SetPosition(const Vector2f& _position) override
-		{
-			Super::SetPosition(_position);
-			text->SetPosition(_position);
-		}
-		FORCEINLINE virtual void SetRotation(const Angle& _rotation) override
-		{
-			Super::SetRotation(_rotation);
-			text->SetRotation(_rotation);
-		}
-		FORCEINLINE virtual void SetScale(const Vector2f& _scale) override
-		{
-			Super::SetScale(_scale);
-			text->SetScale(_scale);
-		}
-		FORCEINLINE virtual void SetOrigin(const Vector2f& _origin) override
-		{
-			Super::SetOrigin(_origin);
-			text->SetOrigin(_origin);
-		}
-		FORCEINLINE virtual void Move(const Vector2f& _offset) override
-		{
-			Super::Move(_offset);
-			text->Move(_offset);
-		}
-		FORCEINLINE virtual void Rotate(const Angle& _angle) override
-		{
-			Super::Rotate(_angle);
-			text->Rotate(_angle);
-		}
-		FORCEINLINE virtual void Scale(const Vector2f& _factor) override
-		{
-			Super::Scale(_factor);
-			text->Scale(_factor);
-		}
+			Vector2f(0.0f,0.0f),
+			Vector2f(_view->getCenter().x - _textRect.size.x / 2.0f, 0.0f),
+			Vector2f(_view->getSize().x - _textRect.size.x, 0.0f),
 
-	#pragma endregion
+			Vector2f(0.0f, _view->getCenter().y - _textRect.size.y / 2.0f),
+			Vector2f(_view->getCenter().x - _textRect.size.x / 2, _view->getCenter().y - _textRect.size.y / 2.0f),
+			Vector2f(_view->getSize().x - _textRect.size.x, _view->getCenter().y - _textRect.size.y / 2.0f),
 
-	public:
-		Label(const string& _text, const RenderType& _type = Screen, const string& _path = "", const FontExtensionType& _fontType = OTF);
-		~Label();
+			Vector2f(0.0f, _view->getSize().y - _textRect.size.y),
+			Vector2f(_view->getCenter().x - _textRect.size.x / 2, _view->getSize().y - _textRect.size.y),
+			Vector2f(_view->getSize().x - _textRect.size.x, _view->getSize().y - _textRect.size.y),
+		};
 
-	private:
-		virtual void Render(RenderWindow& _window) override;
-	};
-}
+		textObject->SetOrigin(_value[_alignement]);
+		textObject->SetPosition(_value[_alignement]);
+	}
+
+public:
+	Label(const TextData& _data, const WidgetType& _type = WT_UI);
+
+	virtual void Render(RenderWindow& _window) override;
+
+};

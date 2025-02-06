@@ -4,6 +4,12 @@
 
 namespace UI
 {
+	enum WidgetType
+	{
+		WT_UI,
+	};
+
+
 	enum VisibilityType
 	{
 		Hidden,
@@ -34,6 +40,7 @@ namespace UI
 
 	public:
 		Widget(const string& _name, const RenderType& _type = Screen);
+		Widget(const WidgetType& _type);
 
 		virtual void Construct() override;
 		virtual void Deconstruct() override;

@@ -104,21 +104,21 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\..\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-audio-d-3.dll" "$(OutDir)"
-xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-graphics-d-3.dll" "$(OutDir)"
-xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-network-d-3.dll" "$(OutDir)"
-xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-system-d-3.dll" "$(OutDir)"
-xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
+      <Command>xcopy /y /d "..\SFML-3.0.0\bin\sfml-audio-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\SFML-3.0.0\bin\sfml-graphics-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\SFML-3.0.0\bin\sfml-network-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\SFML-3.0.0\bin\sfml-system-d-3.dll" "$(OutDir)"
+xcopy /y /d "..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
 
 </Command>
     </PostBuildEvent>
@@ -193,6 +193,7 @@ xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClCompile Include="TestBird.cpp" />
     <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TextWidget.cpp" />
     <ClCompile Include="TriangleActor.cpp" />
     <ClCompile Include="Utilities.cpp" />
     <ClCompile Include="WhiteBird.cpp" />
@@ -241,6 +242,7 @@ xcopy /y /d "..\..\SFML-3.0.0\bin\sfml-window-d-3.dll" "$(OutDir)"
     <ClInclude Include="Spawner.h" />
     <ClInclude Include="SubclassOf.h" />
     <ClInclude Include="TestBird.h" />
+    <ClInclude Include="TextWidget.h" />
     <ClInclude Include="TransformableViewer.h" />
     <ClInclude Include="TransformableModifier.h" />
     <ClInclude Include="Logger.h" />

@@ -336,14 +336,17 @@
     <ClCompile Include="Exercice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OrangeBird.cpp">
-      <Filter>AngryBird\Bird\Orange</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ShapeWidget.cpp">
-      <Filter>Scripts\Core\Actors\Widgets\Shape</Filter>
+    <ClCompile Include="Egg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestBird.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextWidget.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -524,9 +527,6 @@
     <ClInclude Include="GreenBird.h">
       <Filter>AngryBird\Bird\Green</Filter>
     </ClInclude>
-    <ClInclude Include="RedBird.h">
-      <Filter>AngryBird\Bird\Red</Filter>
-    </ClInclude>
     <ClInclude Include="WhiteBird.h">
       <Filter>AngryBird\Bird\White</Filter>
     </ClInclude>
@@ -536,17 +536,14 @@
     <ClInclude Include="Bird.h">
       <Filter>AngryBird\Bird</Filter>
     </ClInclude>
-    <ClInclude Include="Exercice.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="OrangeBird.h">
-      <Filter>AngryBird\Bird\Orange</Filter>
-    </ClInclude>
-    <ClInclude Include="Egg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FileManager.h">
       <Filter>Scripts\Managers\File</Filter>
+    </ClInclude>
+    <ClInclude Include="TestBird.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextWidget.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

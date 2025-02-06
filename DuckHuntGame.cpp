@@ -47,12 +47,13 @@ void DuckHuntGame::Start()
     ball->SetPosition(Vector2f(window.getSize().x * 0.5f, window.getSize().y * 0.3f));
     M_CAMERA.GetCurrent()->SetTarget(ball);
 
-    /*
-    label = M_HUD.CreateWidget<Label>("Coucou", World);
-    label->SetZOrder(1);
+    
+    label = M_HUD.CreateWidget<Label>(TextData("coucou"), WT_UI);
+    label->SetZOrder(10);
+    label->SetAlignement(AT_TOP_LEFT, *M_CAMERA.GetCurrent());
     M_HUD.AddToViewport(label);
     ball->AddChild(label, AT_SNAP_TO_TARGET);
-    */
+    
 
     ////TODO check
     //if (MovementComponent* _movement = duck->GetComponent<MovementComponent>())
